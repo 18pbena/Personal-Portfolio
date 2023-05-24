@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paige Bena</title>
+        <link rel="stylesheet" type="text/css" href="personal.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Paige Bena</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            
+
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Paige Bena</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>About Me</h2>
+            <p>Hi! My name is Paige Bena. 
+            I am working on the Front End Engineer Path on Codecademy.
+             I have a Bachelor's in Elementary Education. I am learning HTML, CSS, and Javascript. </p>
+        </div>
+        
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header')
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+            
+          </script>
+          <section class="skills" id="skills">
+            <h2 class="heading">My Skills</h2>
+
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title">Coding Skills</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>HTML <span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>CSS <span>80%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Javascript <span>70%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-column">
+                    <h3 class="title">Professional Skills</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>Web Design <span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Web Development <span>60%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+
+                            <div class="progress">
+                                <h3>Graphic Design <span>85%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>             
+          <section class="projects" id="projects">
+            <h2>My Projects</h2>
+            <ul class="projects">
+                <li>Squirdle</li>
+                <li>Connect Four</li>
+                <li>Reddit Client</li>
+            </ul>
+          </section> 
+
+          <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+
+            <form action="mailto:18pbena@gmail.com">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email Address" required>
+                        <span class="focus"></span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="number" placeholder="Mobile Number" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email Subject" required>
+                        <span class="focus"></span>
+                    </div>
+                </div>
+
+                <div class="textarea-field">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <span class="focus"></span>
+                </div>
+
+                <button>
+                    <a type="submit" class="btn" value="Submit" onclick="sendemail()">Submit</a> 
+                    
+                </button>
+                
+            </form>
+          </section> 
+          
+          <script src="js/personal.js"></script>
+    </body>
+        <footer>
+             <div class="home-sci">
+                <a href="https://github.com/18pbena" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/paige-bena-a00765242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZ9VhkPwCSEiPlUta%2BT0VCQ%3D%3D" target="
+                "><i class='bx bxl-linkedin' ></i></a>
+        </footer>
+</html>
